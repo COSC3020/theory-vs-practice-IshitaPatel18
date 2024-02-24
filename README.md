@@ -4,7 +4,7 @@
 - List 3 reasons why asymptotic analysis may be misleading with respect to
   actual performance in practice.
 
-  1. The asymptotic analysis may be leading because of the constants that were
+  1. The asymptotic analysis may be misleading because of the constants that were
      were dropped when solving for the complexity. They actually affect the runtime
      of the algorithm (specific timing), where as the complexity simply explains
      how runtime should look.
@@ -23,9 +23,10 @@
   of search in a binary search tree, how long would you guess finding the same
   element in a search tree with 10,000 elements takes? Explain your reasoning.
 
-  1. Since the asymptotic complexity of a binary search tree is $\Theta(log_2(n))$,
-     I would assume it takes around 14 seconds approximately because $log_2(10000)$
-     is approximately 14 seconds.
+  1. Since the timing of the binary search tree with 1,000 elements takes 5 seconds,
+     which looks like $log_2(1,000)/2$ because that approximately results in 5 seconds,
+     I would assume the timing of a binary search tree with 10,000 elements would take
+     7 seconds because $log_2(10,000)/2$ would be approximately 7 seconds.
 
 - You measure the time with 10,000 elements and it takes 100 seconds! List 3
   reasons why this could be the case, given that reasoning with the asymptotic
