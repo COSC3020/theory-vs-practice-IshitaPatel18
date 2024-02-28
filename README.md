@@ -22,7 +22,7 @@
      can also cause the asymptotic analysis to be misleading. For example, when we
      calculated the asymptotic complexity of mergesort, we had that $n + log(n)\in \Theta(log(n))$.
      For our runtime, we would be looking at the log(n), where the n is dropped, but in practice, that n
-     makes a huge difference. Another example could be $n^5 + n^4 \in \O(n^5)$, where we regard only the $n^5$
+     makes a huge difference. Another example could be $n^5 + n^4 \in O(n^5)$, where we regard only the $n^5$
      because the $n^4$ in this case is regarded as a lower order term, but in practice, the $n^4$ would cause
      a significant change in the runtime. (I was stuck on another reason and howardthegr8one had this reason
      which I found to be very interesting and something that I didn't realize at first).
