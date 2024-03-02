@@ -20,8 +20,8 @@
      
   3. The lower order terms that are dropped when calculating the asymptotic complexity
      can also cause the asymptotic analysis to be misleading. For example, when we
-     calculated the asymptotic complexity of mergesort, we had that $n + log(n)\in \Theta(log(n))$.
-     For our runtime, we would be looking at the log(n), where the n is dropped, but in practice, that n
+     calculated the asymptotic complexity of mergesort, we had that $n + nlog(n)\in \Theta(nlog(n))$.
+     For our runtime, we would be looking at the nlog(n), where the n is dropped, but in practice, that n
      makes a huge difference. Another example could be $n^5 + n^4 \in O(n^5)$, where we regard only the $n^5$
      because the $n^4$ in this case is regarded as a lower order term, but in practice, the $n^4$ would cause
      a significant change in the runtime. (I was stuck on another reason and howardthegr8one had this reason
@@ -61,19 +61,15 @@
      because the device that ran the smaller input could have been run on superior hardware.
      (Help from the textbook)
 
-  4. The asymptotic complexity given to the binary search tree algorithm for the worst
-     case/average case is basically log(n), which we have established is from the drop of
-     constants and that log bases don't matter asymptotically. Now since we have
-     basically stated that log(n) is the worst case/average case, what if the element
-     that was found in the tree with 1,000 elements was higher up in the tree, then the worst
-     case/average case predicts. That would explain why the particular element was found faster
-     because it was located closer to the root. Then, when the tree was expanded to 10,000 elements,
-     the particular element we were looking for was pushed further down the tree. This would mean
-     that our predicted calculations, were not the worst/average case, but rather geared towards the
-     best/better cases, and the actual calcualtion of the worst case/ average case would need to change
-     to accomodate to the drastic element location change. Since the same element is lower down
-     in the tree and our calculations for worst case were established as wrong, then the new worst case
-     calculations would lead closer to the resulted 100 seconds.
+  3. We can only assume that the asymptotic analysis of the binary search tree leads to log(n) if the algorithm
+     was implemented efficiently and correctly. However, if the algorithm was implemented incorrectly, making it
+     not efficent and slower, it would lead to an asymptotic analysis that provides a time complexity beyond
+     the scope of what it should be. In addition to this, if the particular element we were looking for in the
+     binary search tree of 1,000 elements is the root/best case, or at least higher up in the tree and it took 5 seconds
+     because of the terrible implementation of the algorithm, then when the tree was expanded to 10,000 elements,
+     and that particular element was pushed further down the tree, leading to average or even worst cases and a greater runtime.
+     Since the implementation of this algorithm was done very poorly to achieve 5 seconds for 1,000 elements for best cases,
+     then the runtime for 10,000 elements on an average/worst cases would account for the 100 seconds.
 
 
 Add your answers to this markdown file.
